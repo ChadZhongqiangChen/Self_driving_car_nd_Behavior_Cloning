@@ -119,11 +119,11 @@ The first one is from center camera.
 
 This one is from left camera.
 
-![Left Center Lane Driving](./Figures/Left_center_lane_driving.jpg "Left Camera Center Lane Driving")
+![Left Center Lane Driving](./Figures/Left_image_center_lane_driving.jpg "Left Camera Center Lane Driving")
 
 This one is from right camera
 
-![Right Center Lane Driving](./Figures/Right_center_lane_driving.jpg "Right Camera Center Lane Driving")
+![Right Center Lane Driving](./Figures/Right_image_center_lane_driving.jpg "Right Camera Center Lane Driving")
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to return back to center lane once it drives close to the edges. These images show what a recovery looks like starting from the sides of the road :
 
@@ -175,7 +175,7 @@ In autonomous driving mode, vehicle steering angle would be predicted based on c
 
 In traning process, left and right images would be treated as center image. Thus left and right angle measurements would need to be corrected as if they were based on center camera as well. The following figure from Udacity illustrates the differences of angles between destination and each camera.
 
-![Angles between Destination and Each Camera](./Figures/Angles_between_Destination_and_Each_Camera.png "Angles between Destination and Each Camera")
+![Angles between Destination and Each Camera](./Figures/Angles between Destination and Each Camera.png "Angles between Destination and Each Camera")
 
 The correction measurement number was taken as 0.2. 
 
