@@ -175,7 +175,7 @@ In autonomous driving mode, vehicle steering angle would be predicted based on c
 
 In traning process, left and right images would be treated as center image. Thus left and right angle measurements would need to be corrected as if they were based on center camera as well. The following figure from Udacity illustrates the differences of angles between destination and each camera.
 
-![Angles between Destination and Each Camera](./Figures/Angles between Destination and Each Camera.png "Angles between Destination and Each Camera")
+![Angles between Destination and Each Camera](./Figures/Angles_between_Destination_and_Each_Camera.png "Angles between Destination and Each Camera")
 
 The correction measurement number was taken as 0.2. 
 
