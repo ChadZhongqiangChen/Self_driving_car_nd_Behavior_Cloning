@@ -114,12 +114,15 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 To capture good driving behavior, using center lane driving, I first recorded four laps on track one for clock direction, and four laps on track one for counter-clock direction. Here is an example image of center lane driving:
 
 The first one is from center camera.
+
 ![Center Lane Driving](./Figures/Center_lane_driving.jpg "Center Camera Center Lane Driving")
 
 This one is from left camera.
+
 ![Left Center Lane Driving](./Figures/Left_center_lane_driving.jpg "Left Camera Center Lane Driving")
 
 This one is from right camera
+
 ![Right Center Lane Driving](./Figures/Right_center_lane_driving.jpg "Right Camera Center Lane Driving")
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to return back to center lane once it drives close to the edges. These images show what a recovery looks like starting from the sides of the road :
@@ -144,7 +147,7 @@ Then I recorded three laps on track two (mountain track) in one direction to get
 
 The next three are center, left, and right images for mountain track driving
 
-![Center Mountain](./Ffigures/Center_mountain.jpg "Center Camera Mountain Driving")
+![Center Mountain](./Figures/Center_mountain.jpg "Center Camera Mountain Driving")
 
 ![Left Mountain](./Figures/Left_mountain.jpg "Left Camera Mountain Driving")
 
@@ -153,9 +156,11 @@ The next three are center, left, and right images for mountain track driving
 To augment the data set, I also flipped images thinking that this would help generalize the model. For example, here is an image that has then been flipped.
 
 This is the original image.
+
 ![Center Lane Driving](./Figures/Center_lane_driving.jpg "Center Camera Center Lane Driving")
 
 This is the flipped (mirror) image. 
+
 ![Mirror Center Lane Driving](./Figures/Mirror_Center_lane_driving.jpg "Mirror Center Camera Center Lane Driving")
 
 The next two are the corresponding flipped left and right images.
@@ -170,7 +175,7 @@ In autonomous driving mode, vehicle steering angle would be predicted based on c
 
 In traning process, left and right images would be treated as center image. Thus left and right angle measurements would need to be corrected as if they were based on center camera as well. The following figure from Udacity illustrates the differences of angles between destination and each camera.
 
-![Angles between Destination and Each Camera](./Figures/Angles_between_Destination_and_Each_Camera.jpg "Angles between Destination and Each Camera")
+![Angles between Destination and Each Camera](./Figures/Angles_between_Destination_and_Each_Camera.png "Angles between Destination and Each Camera")
 
 The correction measurement number was taken as 0.2. 
 
