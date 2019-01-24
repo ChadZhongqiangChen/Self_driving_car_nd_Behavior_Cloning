@@ -73,7 +73,7 @@ In order to gauge how well the model was working, I split my image and steering 
 
 My first model was model0.h5. I found that my first model had a very low mean squared error (loss was 0.0025) on the training set but a high mean squared error on the validation set (loss was 0.024) . This implied that the model was overfitting. The Loss vs. Epoch graph is showed as the following. 
 
-![model0 Loss_epoch](/figures/model0_Loss_epoch.jpg)
+![model0 Loss_epoch](./figures/model0_Loss_epoch.jpg)
 
 I ran the simulator, and it turned out that the vehicle was able to ran in the first track without felling off the road, aand it was able to kept in the center of the lane for most of the time . However, it felled off the road in the seoncd track soon after it started.
 
@@ -81,7 +81,7 @@ To combat the overfitting, I increased the dropout rate in the dropout layer, an
 
 This second model was model1.h5. The Loss vs. Epoch is showed as the following. The training loss is around 0.025, and the validation loss is around 0.059. Both both train and validation error loss are higher than the first model, and train loss is still much lower than validation loss. And this implied that overfitting still existed.
 
-![model1 Loss_epoch](/figures/model1_Loss_epoch.jpg)
+![model1 Loss_epoch](./figures/model1_Loss_epoch.jpg)
 
 I ran the simulator, and it turned out that vehicle was able to ran in the second track without felling off the road. However, in the first track, it fell off the road right before the stone bridge, where road surface texture changed.
 
@@ -89,7 +89,7 @@ To overcome the overfitting, I decided to train the model for longer time. The t
 
 This third model was model2.h5. The Loss vs. Epoch is showed as the following graph. The train loss is around 0.040, and the validation loss is around 0.060. Both train and validation loss are higher than the second model. train loss is still lower than validation loss. And this implied that overfitting still existed, but had been reduced.
 
-![model2 Loss_epoch](/figures/model2_Loss_epoch.jpg)
+![model2 Loss_epoch](./figures/model2_Loss_epoch.jpg)
 
 Then I ran the simulator for the third model model2.h5. The performance turned out to be satisfactory. 
 
