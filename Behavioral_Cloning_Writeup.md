@@ -73,7 +73,7 @@ In order to gauge how well the model was working, I split my image and steering 
 
 My first model was model0.h5. I found that my first model had a very low mean squared error (loss was 0.0025) on the training set but a high mean squared error on the validation set (loss was 0.024) . This implied that the model was overfitting. The Loss vs. Epoch graph is showed as the following. 
 
-![model0 Loss_epoch][image1]: ./figures/model0_Loss_epoch.jpg "model0 Loss vs. Epoch"
+![model0 Loss_epoch](/figures/model0_Loss_epoch.jpg "model0 Loss vs. Epoch")
 
 I ran the simulator, and it turned out that the vehicle was able to ran in the first track without felling off the road, aand it was able to kept in the center of the lane for most of the time . However, it felled off the road in the seoncd track soon after it started.
 
@@ -81,7 +81,7 @@ To combat the overfitting, I increased the dropout rate in the dropout layer, an
 
 This second model was model1.h5. The Loss vs. Epoch is showed as the following. The training loss is around 0.025, and the validation loss is around 0.059. Both both train and validation error loss are higher than the first model, and train loss is still much lower than validation loss. And this implied that overfitting still existed.
 
-![model1 Loss_epoch][image2]: ./figures/model1_Loss_epoch.jpg "model1 Loss vs. Epoch"
+![model1 Loss_epoch](/figures/model1_Loss_epoch.jpg "model1 Loss vs. Epoch")
 
 I ran the simulator, and it turned out that vehicle was able to ran in the second track without felling off the road. However, in the first track, it fell off the road right before the stone bridge, where road surface texture changed.
 
@@ -89,7 +89,7 @@ To overcome the overfitting, I decided to train the model for longer time. The t
 
 This third model was model2.h5. The Loss vs. Epoch is showed as the following graph. The train loss is around 0.040, and the validation loss is around 0.060. Both train and validation loss are higher than the second model. train loss is still lower than validation loss. And this implied that overfitting still existed, but had been reduced.
 
-![model2 Loss_epoch][image3]: ./figures/model2_Loss_epoch.jpg "model2 Loss vs. Epoch"
+![model2 Loss_epoch](/figures/model2_Loss_epoch.jpg "model2 Loss vs. Epoch")
 
 Then I ran the simulator for the third model model2.h5. The performance turned out to be satisfactory. 
 
@@ -105,7 +105,7 @@ The final model architecture (model.py lines 93-107) consisted of a convolution 
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![Network Architecture][image4]: ./figures/Network_Architecture.jpg "Model Visualization"
+![Network Architecture](/figures/Network_Architecture.jpg "Model Visualization")
 
 #### 3. Creation of the Training Set 
 
@@ -114,55 +114,55 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 To capture good driving behavior, using center lane driving, I first recorded four laps on track one for clock direction, and four laps on track one for counter-clock direction. Here is an example image of center lane driving:
 
 The first one is from center camera.
-![Center Lane Driving][image5]: ./figures/Center_lane_driving.jpg "Center Camera Center Lane Driving"
+![Center Lane Driving](/figures/Center_lane_driving.jpg "Center Camera Center Lane Driving")
 
 This one is from left camera.
-![Left Center Lane Driving][image6]: ./figures/Left_center_lane_driving.jpg "Left Camera Center Lane Driving"
+![Left Center Lane Driving](/figures/Left_center_lane_driving.jpg "Left Camera Center Lane Driving")
 
 This one is from right camera
-![Right Center Lane Driving][image7]: ./figures/Right_center_lane_driving.jpg "Right Camera Center Lane Driving"
+![Right Center Lane Driving](/figures/Right_center_lane_driving.jpg "Right Camera Center Lane Driving")
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to return back to center lane once it drives close to the edges. These images show what a recovery looks like starting from the sides of the road :
 
 These three are center, left and right images for recovering from left side of the road.
 
-![Recover from Left][image8]: ./figures/Recover_from_left.jpg "Center Camera Recovering from Left"
+![Recover from Left](/figures/Recover_from_left.jpg "Center Camera Recovering from Left")
 
-![Left Recover from Left][image9]: ./figures/Left_Recover_from_left.jpg "Left Camera Recovering from Left"
+![Left Recover from Left](/figures/Left_Recover_from_left.jpg "Left Camera Recovering from Left")
 
-![Right_Recover from Left][image10]: ./figures/Right_Recover_from_left.jpg "Right Camera Recovering from Left"
+![Right_Recover from Left](/figures/Right_Recover_from_left.jpg "Right Camera Recovering from Left")
 
 The next three are center, left and right images for recovering from right side of the road.
 
-![Recover from Right][image11]: ./figures/Recover_from_right.jpg "Center Camera Recovering from Right"
+![Recover from Right](/figures/Recover_from_right.jpg "Center Camera Recovering from Right")
 
-![Left Recover from Right][image12]: ./figures/Left_Recover_from_right.jpg "Left Camera Recovering from Right"
+![Left Recover from Right](/figures/Left_Recover_from_right.jpg "Left Camera Recovering from Right")
 
-![Right_Recover from Right][image13]: ./figures/Right_Recover_from_right.jpg "Right Camera Recovering from Right"
+![Right_Recover from Right](/figures/Right_Recover_from_right.jpg "Right Camera Recovering from Right")
 
 Then I recorded three laps on track two (mountain track) in one direction to get more data points.
 
 The next three are center, left, and right images for mountain track driving
 
-![Center Mountain][image14]: ./figures/Center_mountain.jpg "Center Camera Mountain Driving"
+![Center Mountain](/figures/Center_mountain.jpg "Center Camera Mountain Driving")
 
-![Left Mountain][image15]: ./figures/Left_mountain.jpg "Left Camera Mountain Driving"
+![Left Mountain](/figures/Left_mountain.jpg "Left Camera Mountain Driving")
 
-![Right_Mountain][image16]: ./figures/Right_mountain.jpg "Right Camera Mountain Driving"
+![Right_Mountain](/figures/Right_mountain.jpg "Right Camera Mountain Driving")
 
 To augment the data set, I also flipped images thinking that this would help generalize the model. For example, here is an image that has then been flipped.
 
 This is the original image.
-![Center Lane Driving][image17]: ./figures/Center_lane_driving.jpg "Center Camera Center Lane Driving"
+![Center Lane Driving](/figures/Center_lane_driving.jpg "Center Camera Center Lane Driving")
 
 This is the flipped (mirror) image. 
-![Mirror Center Lane Driving][image18]: ./figures/Mirror_Center_lane_driving.jpg "Mirror Center Camera Center Lane Driving"
+![Mirror Center Lane Driving](/figures/Mirror_Center_lane_driving.jpg "Mirror Center Camera Center Lane Driving")
 
 The next two are the corresponding flipped left and right images.
 
-![Mirror Left Center Lane Driving][image19]: ./figures/Mirror_Left_center_lane_driving.jpg "Mirror Left Camera Center Lane Driving"
+![Mirror Left Center Lane Driving](/figures/Mirror_Left_center_lane_driving.jpg "Mirror Left Camera Center Lane Driving")
 
-![Mirror Right Center Lane Driving][image20]: ./figures/Mirror_Right_center_lane_driving.jpg "Mirror Right Camera Center Lane Driving"
+![Mirror Right Center Lane Driving](/figures/Mirror_Right_center_lane_driving.jpg "Mirror Right Camera Center Lane Driving")
 
 ##### 3.2. Collection of Steering Angles
 
@@ -170,7 +170,7 @@ In autonomous driving mode, vehicle steering angle would be predicted based on c
 
 In traning process, left and right images would be treated as center image. Thus left and right angle measurements would need to be corrected as if they were based on center camera as well. The following figure from Udacity illustrates the differences of angles between destination and each camera.
 
-![Angles between Destination and Each Camera][image21]: ./figures/Angles_between_Destination_and_Each_Camera.jpg "Angles between Destination and Each Camera"
+![Angles between Destination and Each Camera](/figures/Angles_between_Destination_and_Each_Camera.jpg "Angles between Destination and Each Camera")
 
 The correction measurement number was taken as 0.2. 
 
